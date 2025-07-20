@@ -4,14 +4,14 @@ FROM python:3.11-slim
 WORKDIR /app    
 
 # Copy the requirements file into the container
-COPY requirements.txt  /app/
+COPY . /app/
 
 # Install the dependencies
 
 RUN pip install -r requirements.txt  
 
 # Copy the rest of the application code into the container
-COPY . /app/
+
 
 # Expose the port the app runs on
 EXPOSE 8000
