@@ -8,7 +8,6 @@ COPY requirements.txt  /app/
 
 # Install the dependencies
 
-=======
 RUN pip install -r requirements.txt  
 
 # Copy the rest of the application code into the container
