@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: docker fil run
-          run: docker compose build
+        run: docker compose build
       - name: docker run
         run: docker compose up -d
 
