@@ -4,27 +4,19 @@
 name: Python application code test
 
 on: 
-  # - push
+
   - pull_request
 
-jobs: 
-  codetest:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Dockerfile builds
-          run: docker build -t my-python-app .
-      - name: Docker run
-        run: docker run my-python-app
+jobs:
+  build:
 
-  unittest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: docker fil run
+          run: docker build -t my-python-app -f ./idm-demo/Dockerfile ./.
+
         with:
           python-version: '3.10'
       - name: Install dependencies
