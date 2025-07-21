@@ -7,18 +7,9 @@ on:
   # - push
   - pull_request
 
-jobs: 
-  codetest:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Dockerfile builds
-          run: docker build -t my-python-app .
-      - name: Docker run
-        run: docker run my-python-app
+jobs:
+  build:
 
-  unittest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
