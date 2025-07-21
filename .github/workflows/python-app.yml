@@ -6,6 +6,7 @@ name: Python application code test
 on: 
 
   - pull_request
+  - push
 
 jobs:
   build:
