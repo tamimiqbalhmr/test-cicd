@@ -32,4 +32,4 @@ jobs:
         run: pip install pytest
       - name: Run tests
         run: |
-          pytest tests/
+          pytest --maxfail=1 --disable-warnings -q
